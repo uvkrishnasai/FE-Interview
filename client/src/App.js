@@ -4,41 +4,43 @@ import './App.css';
 function App() {
 
   const [products, setProducts] = useState([]);
-  const product = products.length > 0 ? products[0] : null;
 
   return (
-    <div className="product-listing">
-      {product &&
-        <article className="product-pod">
-          {product.image &&
-            <img
-              className="product-pod-image"
-              src={product.image}
-              alt="Home Depot product"
-            />
-          }
-          <section className="product-pod-details">
-            {product.brand &&
-              <p className="product-pod-brand">
-                <b>
-                  {product.brand}
-                </b>
-              </p>
+    <>
+      <h1>Welcome to HomeDepot Interview</h1>
+      <div className="product-listing">
+        {products.length > 0 &&
+          <article className="product-pod">
+            {products[0].image &&
+              <img
+                className="product-pod-image"
+                src={products[0].image}
+                alt="Home Depot product"
+              />
             }
-            {product.description &&
-              <p className="product-pod-description">
-                {product.description}
-              </p>
-            }
-            {product.value &&
-              <span className="product-pod-price">
-                {'$' + product.value}
-              </span>
-            }
-          </section>
-        </article>
-      }
-    </div>
+            <section className="product-pod-details">
+              {products[0].brand &&
+                <p className="product-pod-brand">
+                  <b>
+                    {products[0].brand}
+                  </b>
+                </p>
+              }
+              {products[0].description &&
+                <p className="product-pod-description">
+                  {products[0].description}
+                </p>
+              }
+              {products[0].value &&
+                <span className="product-pod-price">
+                  {'$' + products[0].value}
+                </span>
+              }
+            </section>
+          </article>
+        }
+      </div>
+    </>
   );
 }
 
