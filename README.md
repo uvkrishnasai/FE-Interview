@@ -4,15 +4,12 @@
 
 1. Checkout the repo
 2. run `npm i`
-3. run `npm run start` to start the express server
-4. cd client
-5. run `npm i`
-6. run `npm run start` to start the react client
+3. run `npm run start` to start the front end and backend servers
 
 ### Challenge 1
 
 Fetch products using rest client of your choice (fetch | axios)
-Endpoint: ![Fetch Products](http://localhost:3001/product-info/products)
+Endpoint: http://localhost:3001/product-info/products
 Show product image, brand, description and price as below for the first product
 ![product pod](/client/public/product-pod.png)
 
@@ -26,7 +23,7 @@ e.g. [HomeDepot appliance PLP page](https://www.homedepot.com/b/Appliances-Refri
 
 Add a button on top of the page and name it group by ratings.
 On click of the button, Fetch ratings from the following endpoint
-e.g. ![Fetch Ratings](http://localhost:3001/product-info/ratings)
+e.g. http://localhost:3001/product-info/ratings
 Group products by ratings:
 products with ratings 4 and above should be grouped together
 products with ratings between 3 and 4 should be grouped together
